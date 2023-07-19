@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <title>La roue des activités</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">La roue des activités</div>
+        <div class="spinbutton">Click</div>
+        <div class="wheel">
+            <div class="activity" style="--i:1;--clr:#ff6961;"><span>Ménage</span></div>
+            <div class="activity" style="--i:2;--clr:#ffb480;"><span>Escalade</span></div>
+            <div class="activity" style="--i:3;--clr:#f8f38d;"><span>Baignade</span></div>
+            <div class="activity" style="--i:4;--clr:#42d6a4;"><span>Mange tes morts</span></div>
+            <div class="activity" style="--i:5;--clr:#08cad1;"><span>Laser Game</span></div>
+            <div class="activity" style="--i:6;--clr:#59adf6;"><span>Acrobranche</span></div>
+            <div class="activity" style="--i:7;--clr:#9d94ff;"><span>La bagarre</span></div>
+            <div class="activity" style="--i:8;--clr:#c780e8;"><span>Tu me donnes 50€</span></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let wheel = document.querySelector(".wheel");
+    let startButton = document.querySelector(".spinbutton");
+    let value = Math.ceil(Math.random() * 3600);
+
+    startButton.onclick = function () {
+        wheel.style.transform = "rotate(" + value +"deg)"
+        value += Math.ceil(Math.random() * 3600);
+    }
+</script>
